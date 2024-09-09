@@ -60,3 +60,8 @@ For instance, to invoke the accelerator in bare-metal software, run:
 cd $RDIR/sims/vcs/
 ./simv-example-HLSRocketConfig-debug <sw binary>
 ```
+To run the simulation using Chipyard, run:
+```
+cd $RDIR/sims/vcs/
+make run-binary-debug CONFIG=HLSRocketConfig BINARY=<sw binary>
+```
