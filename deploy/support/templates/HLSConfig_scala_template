@@ -31,5 +31,5 @@ class WithHLSRoCCExample extends Config((site, here, up) => {
 class HLSRocketConfig extends Config(
     // ${TL_PERIPHERY} // Disable due to Error scala.Some cannot be cast to scala.Function1, and our accelerators currently do not have parameters  
     new WithHLSRoCCExample ++ 
-    new freechips.rocketchip.subsystem.WithNBigCores(1) ++         // single rocket-core
+    new freechips.rocketchip.rocket.WithNBigCores(1) ++         // single rocket-core
     new chipyard.config.AbstractConfig)

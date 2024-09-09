@@ -46,11 +46,11 @@ class HLS${FUNC}AXI (address: BigInt = 0x20000, beatBytes: Int = 8) (implicit p:
             // For AXI4lite, these two signals are always True
             slave_in.r.bits.last := true.B 
 
-            when(slave_in.aw.fire()){
+            when(slave_in.aw.fire){
                 bId := slave_in.aw.bits.id
             }
 
-            when(slave_in.ar.fire()){
+            when(slave_in.ar.fire){
                 rId := slave_in.ar.bits.id 
             }
             slave_in.r.bits.id := rId
